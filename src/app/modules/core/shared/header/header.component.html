@@ -1,0 +1,19 @@
+<nav class="navbar navbar-light bg-white px-lg-5">
+  <a class="navbar-brand"><img src="../../../../../../assets/images/logo.PNG"
+                               class="img-fluid" style="height: 100px ; width: auto" alt="Sample image" ></a>
+  <div class="gap-5 d-flex justify-content-between align-items-center">
+    <h6>{{loggedRole}}</h6>
+    <div class="text-black d-flex">
+      <span class="fi fi-{{selectedValue == 'ar' ? 'tn' :selectedValue == 'en'? 'gb': selectedValue}} w-25"></span>
+      <select [(ngModel)]="selectedValue" class="form-select border-0 m-1" style="outline: none!important;">
+        <option value="ar" selected>Arabe</option>
+        <option value="fr">Français</option>
+        <option value="en">Anglais</option>
+        <option value="es">Espagnol</option>
+        <option value="nl">Netherlands</option>
+      </select>
+    </div>
+    <fa-icon [icon]="faBell" size="2x"></fa-icon>
+    <fa-icon [icon]="faSignOut" style="cursor: pointer" (click)="logout()" size="2x"></fa-icon>
+  </div>
+</nav>

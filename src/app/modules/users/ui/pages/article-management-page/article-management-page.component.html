@@ -1,0 +1,156 @@
+<app-header></app-header>
+<div class="d-flex justify-content-center w-100">
+  <app-side-bar selector="2"></app-side-bar>
+  <div class="flex-column">
+    <app-top-page-header [links]="links" [data]="topPageHeader" selectedIndex="1" (searchEvent)="search($event)"></app-top-page-header>
+    <div class="bg-light flex-column align-items-center justify-content-center w-100 pb-4" style="height: auto">
+      <div class="d-flex w-100">
+        <table *ngIf="articles ; else loading">
+          <thead>
+          <tr class="text-center">
+            <th style="cursor: pointer; text-align: center">المواد</th>
+            <th style="cursor: pointer; text-align: center">تحت الصنف</th>
+            <th style="cursor: pointer; text-align: center">الصنف</th>
+            <th style="cursor: pointer; text-align: center">الحد الإدنى للمخزون</th>
+            <th style="cursor: pointer; text-align: center">المخزون</th>
+            <th style="cursor: pointer; text-align: center">الإجراءات</th>
+          </tr>
+          </thead>
+          <tbody id="table">
+          <tr *ngFor="let article of articles">
+            <td [ngClass]="{'ar-dir': locale == 'ar'}">{{article.name}}</td>
+            <td [ngClass]="{'ar-dir': locale == 'ar'}">{{article?.sousCategory?.sousCatName}}</td>
+            <td [ngClass]="{'ar-dir': locale == 'ar'}">{{article?.category?.catName}}</td>
+            <td [ngClass]="{'ar-dir': locale == 'ar'}">{{article?.stockMin}}</td>
+            <td [ngClass]="{'ar-dir': locale == 'ar'}">{{article?.stockCri}}</td>
+            <td class="w-100 d-flex gap-3 justify-content-center align-items-center" [ngClass]="{'ar-dir': locale == 'ar'}">
+
+              <fa-icon style="cursor: pointer" (click)="editArticle(article)" [icon]="faPencil" [id]="article['id']"></fa-icon>
+              <fa-icon style="cursor: pointer" (click)="archive(article?.id)" [icon]="faArchive" [id]="article['id']"></fa-icon>
+              <fa-icon style="cursor: pointer" [icon]="faBell" [id]="article['id']"></fa-icon>
+            </td>
+          </tr>
+
+          </tbody>
+        </table>
+        <div class="d-flex justify-content-evenly pt-3 px-1" style="width: 82px; color: black">
+          <fa-icon size="1x" style="padding-left: 10px; cursor: pointer" [icon]="faPlus" (click)="open(mymodal)"></fa-icon>
+        </div>
+      </div>
+      <div class="w-100 d-flex justify-content-center align-items-center gap-2 pt-3">
+        <select class="form-select-sm" [(ngModel)]="select" (ngModelChange)="selectPaginator($event)">
+          <option [value]="5" >5</option>
+          <option [value]="10">10</option>
+          <option [value]="15">15</option>
+          <option [value]="20">20</option>
+          <option [value]="50">50</option>
+          <option [value]="100">100</option>
+        </select>
+        <div class="paginator-container d-flex align-items-center justify-content-center">
+          <button class="btn bg-light rounded-2" (click)="leftArrowClick()"><<</button>
+          <div>{{ start }}</div>
+          <button class="btn bg-light rounded-2" (click)="rightArrowClick()">>></button>
+        </div>
+      </div>
+    </div>
+
+    <ng-template #mymodal let-modal>
+      <div  class="p-3 text-center">
+        <h4 class="" id="modal-basic-title">{{modalTitle}}</h4>
+      </div>
+      <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+
+
+        <div  class="modal-body">
+          <input hidden formControlName="id" type="text" class="form-control" id="id" value>
+          <div class="form-group" [ngClass]="{'ar-dir': locale == 'ar'}">
+            <label for="articleName" i18n>إسم المادة</label>
+            <input [ngClass]="{'ar-dir': locale == 'ar'}" formControlName="articleName" type="text" class="form-control" id="articleName" placeholder="إسم المادة" i18n-placeholder>
+          </div>
+          <div class="form-group" [ngClass]="{'ar-dir': locale == 'ar'}">
+            <label for="category" i18n>الصنف</label>
+            <select (change)="categoryChange($event)" [ngClass]="{'ar-dir': locale == 'ar'}" formControlName="category" class="form-control" id="category">
+              <option value="">أضف صنفا</option>
+              <option *ngFor="let category of categories" [value]="category.id">
+                {{category.catName}}
+              </option>
+            </select>
+          </div>
+          <div class="form-group" [ngClass]="{'ar-dir': locale == 'ar'}">
+            <label for="sousCategory" i18n>تحت الصنف</label>
+            <select (change)="addSousCategory($event)" [ngClass]="{'ar-dir': locale == 'ar'}" formControlName="sousCategory" class="form-control" id="sousCategory">
+              <option value="" >أضف تحت صنف</option>
+              <option *ngFor="let sousCategory of sousCategories" [value]="sousCategory.id">
+                {{sousCategory.sousCatName}}
+              </option>
+            </select>
+          </div>
+          <div class="form-group" [ngClass]="{'ar-dir': locale == 'ar'}">
+            <label for="code" i18n>عيين رمزا</label>
+            <input [ngClass]="{'ar-dir': locale == 'ar'}" formControlName="code" type="text" class="form-control" id="code" placeholder="رمز المادة" i18n-placeholder>
+          </div>
+          <div class="d-flex justify-content-between w-100 align-items-center pt-2" [ngClass]="{'ar-dir': locale == 'ar'}">
+            <div class="form-group d-flex w-100 justify-content-between align-items-center">
+            <label for="critic" i18n>الحد الادنى للمخزون</label>
+            <input [ngClass]="{'ar-dir': locale == 'ar'}" formControlName="critic" type="number" class="form-control" style="max-width: 40%"   id="critic">
+            </div>
+            <div class="form-group d-flex w-100 justify-content-evenly align-items-center">
+              <label for="min" i18n>المخزون</label>
+              <input [ngClass]="{'ar-dir': locale == 'ar'}" formControlName="min" type="number" class="form-control"  style="max-width: 40%"  id="min">
+            </div>
+
+            </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="submit" class="btn primary" [disabled]="formGroup.invalid">{{modalTitle}}</button>
+          <button type="button" class="btn cancel" (click)="modal.close('Save click')" i18n>إلغاء</button>
+        </div>
+      </form>
+    </ng-template>
+
+
+    <ng-template #sousCat let-modal>
+      <div  class="p-3 text-center">
+        <h4 class="">أضف تحت الصنف</h4>
+      </div>
+        <div  class="modal-body">
+          <div class="form-group" [ngClass]="{'ar-dir': locale == 'ar'}">
+            <label for="sousCategory" i18n>تحت الصنف</label>
+           <input type="text" class="form-control" [(ngModel)]="sousCatName">
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn primary" [disabled]="sousCatName=='' || sousCatName== null" (click)="addSousCat()">أضف تحت الصنف</button>
+          <button type="button" class="btn cancel" (click)="modal.close('Save click')" i18n>إلغاء</button>
+        </div>
+    </ng-template>
+
+    <ng-template #categoryModal let-modal>
+      <div  class="p-3 text-center">
+        <h4 class="">أضف صنفا</h4>
+      </div>
+      <div  class="modal-body">
+        <div class="form-group" [ngClass]="{'ar-dir': locale == 'ar'}">
+          <label for="sousCategory" i18n>الصنف</label>
+          <input type="text" class="form-control" [(ngModel)]="categoryName">
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn primary" [disabled]="categoryName=='' || categoryName== null" (click)="addCat()">أضف الصنف</button>
+        <button type="button" class="btn cancel" (click)="modal.close('Save click')" i18n>إلغاء</button>
+      </div>
+    </ng-template>
+  </div>
+  <ng-template #loading>
+    <div style="width: 65vw" class="pt-3 align-self-center text-center mb-4">
+      <fa-icon [icon]="faCircleNotch" [spin]="true" style="color: #19469A" size="2x"></fa-icon>
+      <div class="loading-text" i18n>
+        الرجاء الإنتظار...
+      </div>
+    </div>
+  </ng-template>
+</div>
+

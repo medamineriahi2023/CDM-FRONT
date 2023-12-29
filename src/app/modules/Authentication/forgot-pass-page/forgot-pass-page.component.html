@@ -1,0 +1,54 @@
+<section class="vh-100">
+  <div [ngClass]="{'ar-dir': locale =='fr'}"
+       class="d-flex flex-column flex-md-row text-center text-md-end justify-content-between py-1 px-4 px-xl-5  shadow-sm p-2 rounded inputs">
+    <div class="text-black mt-sm-4 mb-md-0" >
+      <div class="d-flex bg-white rounded-5 px-3">
+        <span class="fi fi-{{selectedValue == 'ar' ? 'tn' :selectedValue == 'en'? 'gb': selectedValue}} w-25"></span>
+        <select [(ngModel)]="selectedValue" class="form-select border-0" style="outline: none!important;">
+          <option value="ar" selected>Arabe</option>
+          <option value="fr">Français</option>
+          <option value="en">Anglais</option>
+          <option value="es">Espagnol</option>
+          <option value="nl">Netherlands</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Right -->
+    <div class="d-flex gap-2 mt-4 align-items-center" [ngClass]="{'ar-dir': locale =='fr'}">
+      <div class="text-black fw-bold">
+        <h1 i18n>الجمهورية التونسية</h1>
+      </div>
+      <div class="flag">
+        <img src="../../../../assets/images/Flag_of_Tunisia.svg.png"
+             class="img-fluid" alt="Sample image">
+      </div>
+    </div>
+    <!-- Right -->
+  </div>
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5 opacity-50">
+        <img src="../../../../assets/images/logo.PNG"
+             class="img-fluid" alt="Sample image">
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <form [formGroup]="registerForm" (ngSubmit)="resetPassword()">
+
+
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <input formControlName="email" [ngClass]="{'warningPos' : locale != 'ar' && registerForm.touched , 'ar-dir': locale =='ar'}" dir="rtl" type="email" id="form3Example3" class="form-control form-control-lg inputs"
+                   placeholder="ادخل بريدك الالكتروني" i18n-placeholder/>
+          </div>
+
+          <div dir="rtl" class="text-center text-lg-start mt-4 pt-2 float-end ">
+            <button dir="rtl" type="submit" class="btn-lg loginbtn"
+                    style="padding-left: 2.5rem; padding-right: 2.5rem;" i18n>اعد ضبط كلمه السر</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

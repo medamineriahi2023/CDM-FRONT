@@ -1,0 +1,12 @@
+<div class="d-flex mx-1" style="background: darkgray; height: 60px; border-top-left-radius: 10px" >
+  <div class="w-25 d-flex align-items-center px-3 fw-bold title" [ngClass]="{'selected-title first': selectedIndex === '1', 'ar-dir': locale == 'ar'}" [routerLink]="links?.[0]"> {{data?.[0]}} </div>
+  <div dir="rtl" class="w-25 d-flex align-items-center px-3 fw-bold title" [ngClass]="{'selected-title': selectedIndex === '2' , 'ar-dir': locale == 'ar'}" [routerLink]="links?.[1]">{{data?.[1]}} </div>
+  <div dir="rtl" class="w-25 d-flex align-items-center px-3 fw-bold title" [ngClass]="{'selected-title': selectedIndex === '3' , 'ar-dir': locale == 'ar'}" [routerLink]="links?.[2]">{{data?.[2]}}</div>
+  <div class="w-25 d-flex align-items-center px-2 fw-bold title" [ngClass]="{'ar-dir': locale == 'ar'}">
+    <div [ngClass]="{'ar-dir': locale == 'ar'}" class="d-flex bg-white rounded-5 align-items-center justify-content-between">
+    <input [ngClass]="{'ar-dir': locale == 'ar'}" type="text" [(ngModel)]="search" (ngModelChange)="searchChange($event)" class="rounded-5 border-0 px-3 w-100" style="height : 35px ; border-right :0!important; outline: none" placeholder="بحث" i18n-placeholder>
+    <fa-icon class="px-1" style="color: #000000" [icon]="faSearch"></fa-icon>
+  </div>
+    <img *ngIf="hasCalender" style="width: 40px; margin-right: 10px" src="../../../../../assets/icons/calendrier.png"/>
+  </div>
+</div>

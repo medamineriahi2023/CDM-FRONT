@@ -1,0 +1,39 @@
+* {
+  direction: ltr;
+  font-family: coconarabiclight, sans-serif;
+}
+
+.ar-dir{
+  direction: rtl!important;
+}
+.fr-dir{
+  direction: ltr!important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+
+}
+
+form select.ng-invalid.ng-touched,
+form textarea.ng-invalid.ng-touched,
+form input.ng-invalid.ng-touched{
+  background: url("./assets/icons/warning.svg") no-repeat left 5px center;
+  background-size: 25px;
+  border: 1px solid #e80303;
+}
+
+form select.ng-valid.ng-touched,
+form textarea.ng-valid.ng-touched,
+form input.ng-valid.ng-touched {
+  background: url("./assets/icons/correct.svg") no-repeat left 5px center;
+  background-size: 25px;
+  border: 1px solid #2d9a7a;
+}
+
+form input.ng-touched, select.ng-touched{
+  padding-left: 35px;
+}

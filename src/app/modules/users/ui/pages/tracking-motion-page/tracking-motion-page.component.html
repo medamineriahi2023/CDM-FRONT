@@ -1,0 +1,102 @@
+<app-header></app-header>
+<div class="d-flex justify-content-center w-100">
+  <app-side-bar selector="3"></app-side-bar>
+  <div class="flex-column">
+    <app-top-page-header [links]="links" [data]="topPageHeader" selectedIndex="3" (searchEvent)="search($event)"></app-top-page-header>
+    <div class="bg-light flex-column align-items-center justify-content-center w-100 pb-4" style="height: auto">
+      <div class="d-flex w-100 flex-column" id="toPDF">
+        <div style="display:none;" id="toHide">
+          <div class="d-flex justify-content-between align-items-center px-3">
+            <img src="../../../../../../assets/images/logo.PNG" style="height: 80px; width: auto" >
+            <h2>قائمة البريد</h2>
+          </div>
+        </div>
+        <div class="d-flex">
+          <table *ngIf="trackingMotions ; else loading" >
+            <thead>
+            <tr class="text-center">
+              <th style="cursor: pointer; text-align: center ; width: 2%"></th>
+              <th style="cursor: pointer; text-align: center">الرقم</th>
+              <th style="cursor: pointer; text-align: center">التاريخ</th>
+              <th style="cursor: pointer; text-align: center">الباعث</th>
+              <th style="cursor: pointer; text-align: center">المتلقي</th>
+              <th style="cursor: pointer; text-align: center">تاريخ التكليف</th>
+              <th style="cursor: pointer; text-align: center">الموضوع</th>
+              <th style="cursor: pointer; text-align: center">تصفح</th>
+            </tr>
+            </thead>
+            <tbody id="table">
+            <tr *ngFor="let tracking of trackingMotions">
+              <td style="width: 2%"><input type="checkbox" [value]="[tracking.id,tracking.receiver?.numReceiver]" (change)="addValue($event)"></td>
+              <td [ngClass]="{'ar-dir': locale == 'ar'}">{{tracking.receiver?.numReceiver}}</td>
+              <td [ngClass]="{'ar-dir': locale == 'ar'}">{{tracking?.receiver?.date | date : 'yyyy/MM/dd'}}</td>
+              <td [ngClass]="{'ar-dir': locale == 'ar'}">{{tracking?.receiver?.emitteur}}</td>
+              <td [ngClass]="{'ar-dir': locale == 'ar'}">{{tracking?.distinataire}}</td>
+              <td [ngClass]="{'ar-dir': locale == 'ar'}">{{tracking?.date}}</td>
+              <td [ngClass]="{'ar-dir': locale == 'ar'}">{{tracking?.receiver?.objet}}</td>
+              <td class="w-100 d-flex gap-3 justify-content-center align-items-center" [ngClass]="{'ar-dir': locale == 'ar'}">
+                <fa-icon style="cursor: pointer" (click)="downloadFile(tracking?.receiver?.fileBlob)" [icon]="faFilePdf" [id]="tracking['id']"></fa-icon>
+              </td>
+            </tr>
+
+            </tbody>
+          </table>
+          <div id="hide">
+            <div class="d-flex justify-content-evenly pt-3 px-1" style="width: 82px; color: black">
+              <fa-icon size="1x" style="padding-left: 10px; cursor: pointer" [icon]="faPlayCircle" (click)="open(mymodal)"></fa-icon>
+              <fa-icon size="1x" style="padding-left: 10px; cursor: pointer" [icon]="faDownload" (click)="openPDF()"></fa-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-100 d-flex justify-content-center pt-3">
+        <select class="form-select-sm" [(ngModel)]="select" (ngModelChange)="selectPaginator($event)">
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select>
+      </div>
+    </div>
+
+    <ng-template #mymodal let-modal>
+      <div  class="p-3 text-center">
+        <h4 class="" id="modal-basic-title">{{modalTitle}}</h4>
+      </div>
+      <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+
+
+        <div  class="modal-body">
+          <div class="form-group" [ngClass]="{'ar-dir': locale == 'ar'}">
+            <label for="num" i18n>أرقام البريد</label>
+            <input [ngClass]="{'ar-dir': locale == 'ar'}" formControlName="num" type="text" class="form-control" id="num" placeholder="رقم البريد" i18n-placeholder>
+          </div>
+          <div class="form-group" [ngClass]="{'ar-dir': locale == 'ar'}">
+            <label for="service" i18n>المتلقي</label>
+            <select [ngClass]="{'ar-dir': locale == 'ar'}" formControlName="service" class="form-select" id="service">
+              <option *ngFor="let service of services" [value]="service.id">
+                {{service.serviceName}}
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="submit" class="btn primary" [disabled]="formGroup.invalid">{{modalTitle}}</button>
+          <button type="button" class="btn cancel" (click)="modal.close('Save click')" i18n>إلغاء</button>
+        </div>
+      </form>
+    </ng-template>
+  </div>
+  <ng-template #loading>
+    <div style="width: 65vw" class="pt-3 align-self-center text-center mb-4">
+      <fa-icon [icon]="faCircleNotch" [spin]="true" style="color: #19469A" size="2x"></fa-icon>
+      <div class="loading-text" i18n>
+        الرجاء الإنتظار...
+      </div>
+    </div>
+  </ng-template>
+</div>
+

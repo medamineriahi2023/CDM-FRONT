@@ -1,0 +1,72 @@
+tr>th {
+  height: 60px;
+  border: 3px solid white;
+  width: 18%;
+}
+thead{
+  background-color: #7FD3EE;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border: 3px solid white;
+  color:#fff;
+}
+tbody{
+  color: black;
+  border: 3px solid white;
+
+}
+td{
+  padding-left: 5px;
+  padding-right: 5px;
+}
+tr>td {
+  height: 40px;
+  border: 3px solid white;
+  width: 18%;
+}
+table{
+  width: 65vw;
+}
+
+input[type=checkbox]{
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  /*text-indent: -9999px;*/
+  width: 35px;
+  height: 20px;
+  background: grey;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+  margin-left: 10px;
+}
+
+label:after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: #7FD3EE;
+}
+
+input:checked + label:after {
+  left: calc(100%);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 50px;
+}

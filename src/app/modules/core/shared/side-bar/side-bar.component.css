@@ -1,0 +1,13 @@
+.selected-title{
+  background-color:#19469A;
+  color: white ; font-size: 30px!important;
+}
+.title {
+  font-size: 18px;
+  border-bottom: 3px solid white ;
+  color: white;
+  cursor: pointer;
+}
+.disabled {
+  color: #e0e0e0;
+}

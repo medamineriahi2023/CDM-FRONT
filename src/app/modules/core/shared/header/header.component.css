@@ -1,0 +1,12 @@
+@import "../../../../../../node_modules/flag-icon-css/css/flag-icons.min.css";
+a:hover,
+a:active,
+a:focus,
+select:hover,
+select:active,
+select:focus,
+button:hover,
+button:active,
+button:focus {
+  outline: none!important;
+}

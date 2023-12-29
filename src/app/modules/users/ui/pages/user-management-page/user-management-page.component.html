@@ -1,0 +1,104 @@
+<app-header></app-header>
+<div class="d-flex justify-content-center w-100">
+<app-side-bar selector="1"></app-side-bar>
+  <div class="flex-column">
+  <app-top-page-header [links]="links" [data]="topPageHeader" selectedIndex="1" (searchEvent)="search($event)"></app-top-page-header>
+    <div class="bg-light flex-column align-items-center justify-content-center pb-4" style="height: auto;">
+      <div class="d-flex w-100">
+  <app-data-table [sortType]="asc" (sort)="sort($event)" (disabled)="onSwitchChange($event)" [isLoading]="isLoading" (generate)="generateEventHandler($event)" (edit)="parentEventHandlerFunction($event)" [data]="data" [services]="services"></app-data-table>
+        <div class="d-flex justify-content-evenly pt-3 px-1" style="width: 90px; color: black">
+          <fa-icon size="1x" style="padding-left: 8px; cursor: pointer" [icon]="faPlus" (click)="open(mymodal)"></fa-icon>
+          <fa-icon (click)="openFileModal()" size="1x" [icon]="faUpload"></fa-icon>
+        </div>
+      </div>
+  <div class="w-100 d-flex justify-content-center pt-3">
+      <select class="form-select-sm" [(ngModel)]="select" (ngModelChange)="setSelectedPayPeriod($event)">
+    <option [value]="5">5</option>
+    <option [value]="10">10</option>
+    <option [value]="15">15</option>
+    <option [value]="20">20</option>
+    <option [value]="50">50</option>
+    <option [value]="100">100</option>
+  </select>
+    <div class="paginator-container d-flex align-items-center justify-content-center">
+      <button class="btn bg-light rounded-2" (click)="leftArrowClick()"><<</button>
+      <div>{{ start }}</div>
+      <button class="btn bg-light rounded-2" (click)="rightArrowClick()">>></button>
+    </div>
+  </div>
+  </div>
+
+  <ng-template #mymodal let-modal>
+    <div dir="rtl" class="p-3 text-center">
+      <h4 class="" id="modal-basic-title">{{modalTitle}}</h4>
+    </div>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+
+    <div dir="rtl" class="modal-body">
+      <input hidden formControlName="id" type="text" class="form-control" id="id">
+        <div class="form-group">
+          <label for="fullname" i18n>الإسم و اللقب</label>
+          <input formControlName="fullname" type="text" class="form-control" id="fullname" placeholder="Foulen ben foulen">
+        </div>
+        <div class="form-group" >
+          <label for="email" i18n>البريد الإلكتوني</label>
+          <input formControlName="email" type="email" class="form-control" id="email" placeholder="name@example.com">
+        </div>
+        <div class="form-group" >
+          <label for="password" i18n>كلمة السر</label>
+          <input formControlName="password" type="password" class="form-control" id="password" placeholder="Mot de passe">
+        </div>
+        <div class="form-group">
+          <label for="service" i18n>الخدمات</label>
+          <select formControlName="service" class="form-select" id="service">
+            <option *ngFor="let service of services" [value]="service.id">
+              {{service["serviceName"]}}
+            </option>
+          </select>
+        </div>
+      <div class="form-group">
+        <label for="role" i18n>الملف الشخصي</label>
+        <select formControlName="role" class="form-select" id="role">
+          <option *ngFor="let role of roles" [value]="role.name">
+            {{role["name"]}}
+          </option>
+        </select>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button type="submit" class="btn primary">{{modalTitle}}</button>
+      <button type="button" class="btn cancel" (click)="modal.close('Save click')" i18n>إلغاء</button>
+    </div>
+    </form>
+  </ng-template>
+
+    <ng-template #file let-fileModal [ngClass]="{'ar-dir': locale == 'ar'}">
+      <div class="mb-3 p-5">
+        <div *ngIf="!isUploading ;else loading" [ngClass]="{'ar-dir': locale == 'ar'}">
+          <div [ngClass]="{'ar-dir': locale == 'ar'}">
+          <h6 [ngClass]="{'ar-dir': locale == 'ar'}" i18n>لتحميل المستخدمين عليك إحترم القواعد التالية</h6>
+          <ul [ngClass]="{'ar-dir': locale == 'ar'}">
+            <li [ngClass]="{'ar-dir': locale == 'ar'}" i18n> يجب أن يكون الملف من نوع .csv</li>
+            <li [ngClass]="{'ar-dir': locale == 'ar'}" i18n>يجب أن يحتوي السطر الأول على مفاتيح المستخدم</li>
+            <li [ngClass]="{'ar-dir': locale == 'ar'}" i18n>يجب أن يكون إسم الخدمة بالضبط مثل المسجلة في قاعدة البيانات</li>
+          </ul>
+            <p style="font-size: 14px" [ngClass]="{'ar-dir': locale == 'ar'}" i18n>يمكنك تنزيل واستخدام النموذج وملء الملف <a style="text-decoration: none ; cursor: pointer; outline: none" href="../../../../../../assets/file/file.csv" download="file.csv"><b>من هنا</b></a></p>
+          </div>
+        <input #fileInput class="form-control" type="file" id="formFile" (change)="checkFile($event)">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn primary" (click)="importData()" [disabled]="!selectedFile" i18n>تحميل المستخدمين</button>
+        <button type="button" class="btn cancel" (click)="fileModal.close('Save click')" i18n>إلغاء</button>
+      </div>
+    </ng-template>
+</div>
+  <ng-template #loading>
+    <div class="pt-3 align-self-center text-center mb-4">
+      <fa-icon [icon]="faCircleNotch" [spin]="true" style="color: #19469A" size="2x"></fa-icon>
+      <div class="loading-text" i18n>الرجاء الإنتظار...</div>
+    </div>
+  </ng-template>
+</div>

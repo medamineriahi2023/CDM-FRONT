@@ -1,0 +1,158 @@
+<app-header></app-header>
+<div class="d-flex justify-content-center w-100">
+  <app-side-bar selector="4"></app-side-bar>
+  <div class="flex-column">
+    <app-top-page-header [links]="links" [data]="topPageHeader" selectedIndex="2" (searchEvent)="search($event)"></app-top-page-header>
+    <div class="bg-light flex-column align-items-center justify-content-center w-100 pb-4" style="height: auto">
+      <div class="d-flex w-100 flex-column" id="toPDF">
+        <div style="display:none;" id="toHide">
+          <div class="d-flex justify-content-between align-items-center px-3">
+            <img src="../../../../../../assets/images/logo.PNG" style="height: 80px; width: auto" >
+            <h2>قائمة البريد</h2>
+          </div>
+        </div>
+        <div class="d-flex">
+          <table *ngIf="infractions ; else loading" >
+            <thead>
+            <tr class="text-center">
+              <th style="cursor: pointer; text-align: center">ع/ر</th>
+              <th style="cursor: pointer; text-align: center">التاريخ</th>
+              <th style="cursor: pointer; text-align: center">الساعة</th>
+              <th style="cursor: pointer; text-align: center">عدد المحضر</th>
+              <th style="cursor: pointer; text-align: center">ب.ت.و صاحب المخالفة</th>
+              <th style="cursor: pointer; text-align: center">مستوى الأشغال</th>
+              <th style="cursor: pointer; text-align: center">الأضرار الناتجة</th>
+              <th style="cursor: pointer; text-align: center">إسم العون المكلف</th>
+              <th style="cursor: pointer; text-align: center">فحوى القرار</th>
+            </tr>
+            </thead>
+            <tbody id="table">
+            <tr *ngFor="let infraction of infractions">
+              <td [ngClass]="{'ar-dir': locale == 'ar'}">{{infraction?.plainte?.numPlainte}}</td>
+              <td [ngClass]="{'ar-dir': locale == 'ar'}">{{infraction?.date | date : 'yyyy/MM/dd'}}</td>
+              <td [ngClass]="{'ar-dir': locale == 'ar'}">{{infraction?.date | date : 'hh:MM:ss'}}</td>
+              <td [ngClass]="{'ar-dir': locale == 'ar'}">{{infraction?.numInfraction}}</td>
+              <td [ngClass]="{'ar-dir': locale == 'ar'}">{{infraction?.cin}}</td>
+              <td [ngClass]="{'ar-dir': locale == 'ar'}">{{infraction?.niveauTravaux}}</td>
+              <td [ngClass]="{'ar-dir': locale == 'ar'}">{{infraction?.dommages}}</td>
+              <td [ngClass]="{'ar-dir': locale == 'ar'}">{{infraction?.aideAffectee}}</td>
+              <td [ngClass]="{'ar-dir': locale == 'ar'}">{{infraction?.decision}}</td>
+              <td class="w-100 d-flex gap-3 justify-content-center align-items-center" [ngClass]="{'ar-dir': locale == 'ar'}">
+                <fa-icon style="cursor: pointer" (click)="downloadFile(infraction?.fileBlob)" [icon]="faFilePdf" [id]="infraction['id']"></fa-icon>
+              </td>
+            </tr>
+
+            </tbody>
+          </table>
+          <div id="hide">
+            <div class="d-flex justify-content-evenly pt-3 px-1" style="width: 82px; color: black">
+              <fa-icon size="1x" style="padding-left: 10px; cursor: pointer" [icon]="faPlus" (click)="open(mymodal)"></fa-icon>
+              <fa-icon size="1x" style="padding-left: 10px; cursor: pointer" [icon]="faDownload" (click)="openPDF()"></fa-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-100 d-flex justify-content-center pt-3">
+        <select class="form-select-sm" [(ngModel)]="select" (ngModelChange)="selectPaginator($event)">
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select>
+      </div>
+    </div>
+
+    <ng-template #mymodal let-modal>
+      <div  class="p-3 text-center">
+        <h4 class="" id="modal-basic-title">{{modalTitle}}</h4>
+      </div>
+      <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+
+
+        <div  class="modal-body">
+          <input hidden formControlName="id" type="text" class="form-control" id="id" value>
+          <div class="d-flex justify-content-between">
+            <div class="form-group col-md-5" [ngClass]="{'ar-dir': locale == 'ar'}">
+              <label i18n>التاريخ</label>
+              <div class="input-group">
+                <input class="form-control" placeholder="yyyy-mm-dd"
+                       name="dp" formControlName="date" ngbDatepicker #d="ngbDatepicker">
+                <div class="input-group-append">
+                  <img src="../../../../../../assets/icons/calendrier.png" class="px-1" style="width: 50px ; height: auto" (click)="d.toggle()"/>
+                </div>
+              </div>
+            </div>
+            <div class="form-group col-md-5" [ngClass]="{'ar-dir': locale == 'ar'}">
+              <label for="numPlainte" i18n>ع/ر</label>
+              <select [ngClass]="{'ar-dir': locale == 'ar'}" formControlName="numPlainte" class="form-select" id="numPlainte">
+                <option *ngFor="let plainte of plaintes" [value]="plainte.id">
+                  {{plainte.numPlainte}}
+                </option>
+              </select>
+            </div>
+
+          </div>
+          <div class="d-flex justify-content-between">
+            <div class="form-group col-md-5" [ngClass]="{'ar-dir': locale == 'ar'}">
+              <label i18n>الساعة</label>
+              <ngb-timepicker formControlName="time" [ngClass]="{'ar-dir': locale == 'ar'}"></ngb-timepicker>
+            </div>
+            <div class="form-group col-md-5" [ngClass]="{'ar-dir': locale == 'ar'}">
+              <label for="numInfraction" i18n>عدد المحضر</label>
+              <input [ngClass]="{'ar-dir': locale == 'ar'}" formControlName="numInfraction" type="text" class="form-control" id="numInfraction">
+            </div>
+          </div>
+          <div class="d-flex justify-content-between">
+            <div class="form-group col-md-5" [ngClass]="{'ar-dir': locale == 'ar'}">
+              <label for="aideAffectee" i18n>العون المكلف</label>
+              <input [ngClass]="{'ar-dir': locale == 'ar'}" formControlName="aideAffectee" type="text" class="form-control" id="aideAffectee">
+            </div>
+            <div class="form-group col-md-5" [ngClass]="{'ar-dir': locale == 'ar'}">
+              <label for="cin" i18n>ب.ت.و صاحب المخالفة</label>
+              <input [ngClass]="{'ar-dir': locale == 'ar'}" formControlName="cin" type="text" class="form-control" id="cin">
+            </div>
+          </div>
+          <div class="form-group" [ngClass]="{'ar-dir': locale == 'ar'}">
+            <label for="objet" i18n>محتوى المخالفة</label>
+            <input [ngClass]="{'ar-dir': locale == 'ar'}" formControlName="objet" type="text" class="form-control" id="objet">
+          </div>
+          <div class="form-group" [ngClass]="{'ar-dir': locale == 'ar'}">
+            <label for="niveauTravaux" i18n>مستوى الاشغال</label>
+            <input [ngClass]="{'ar-dir': locale == 'ar'}" formControlName="niveauTravaux" type="text" class="form-control" id="niveauTravaux">
+          </div>
+          <div class="form-group" [ngClass]="{'ar-dir': locale == 'ar'}">
+            <label for="dommages" i18n>الأضرار الناتجة</label>
+            <input [ngClass]="{'ar-dir': locale == 'ar'}" formControlName="dommages" type="text" class="form-control" id="dommages">
+          </div>
+          <div class="form-group" [ngClass]="{'ar-dir': locale == 'ar'}">
+            <label for="decision" i18n>فحوى القرار</label>
+            <input [ngClass]="{'ar-dir': locale == 'ar'}" formControlName="decision" type="text" class="form-control" id="decision">
+          </div>
+
+
+          <div class="form-group" [ngClass]="{'ar-dir': locale == 'ar'}">
+            <label for="file" i18n>الملف</label>
+            <input #fileInput class="form-control" type="file" id="file" (change)="checkFile($event)">
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn primary" [useExistingCss]="true" printSectionId="details" ngxPrint i18n>طباعة</button>
+          <button type="submit" class="btn primary" [disabled]="formGroup.invalid">{{modalTitle}}</button>
+          <button type="button" class="btn cancel" (click)="modal.close('Save click')" i18n>إلغاء</button>
+        </div>
+      </form>
+    </ng-template>
+  </div>
+  <ng-template #loading>
+    <div style="width: 65vw" class="pt-3 align-self-center text-center mb-4">
+      <fa-icon [icon]="faCircleNotch" [spin]="true" style="color: #19469A" size="2x"></fa-icon>
+      <div class="loading-text" i18n>
+        الرجاء الإنتظار...
+      </div>
+    </div>
+  </ng-template>
+</div>
+

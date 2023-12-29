@@ -1,0 +1,48 @@
+<div class="w-100 position-relative">
+<table *ngIf="data && !isLoading; else loading">
+   <thead>
+   <tr class="text-center">
+     <th style="cursor: pointer; text-align: center" (click)="sortWithUsername()" i18n> المستخدمين
+       <fa-icon *ngIf="sortby == 'fullname' && sortType==true" style="cursor: pointer; margin-top: 10px" [icon]="faSortAsc"></fa-icon>
+       <fa-icon *ngIf="sortby == 'fullname' && sortType==false" style="cursor: pointer; margin-top: 10px" [icon]="faSortDesc"></fa-icon>
+     </th>
+     <th style="cursor: pointer" (click)="sortWithEmail()" i18n> البريد الالكتروني
+       <fa-icon *ngIf="sortby == 'email' && sortType==true" style="cursor: pointer; margin-top: 10px" [icon]="faSortAsc"></fa-icon>
+       <fa-icon *ngIf="sortby == 'email' && sortType==false" style="cursor: pointer; margin-top: 10px" [icon]="faSortDesc"></fa-icon>
+
+     </th>
+     <th style="cursor: pointer" (click)="sortWithService()" i18n>الخدمات
+       <fa-icon *ngIf="sortby == 'service' && sortType==true" style="cursor: pointer; margin-top: 10px"  [icon]="faSortAsc"></fa-icon>
+       <fa-icon *ngIf="sortby == 'service' && sortType==false" style="cursor: pointer; margin-top: 10px"  [icon]="faSortDesc"></fa-icon>
+     </th>
+     <th style="cursor: pointer" (click)="sortWithRole()" i18n> الملف الشخصي
+       <fa-icon *ngIf="sortby == 'role'&& sortType==true" style="cursor: pointer; margin-top: 10px" [icon]="faSortAsc"></fa-icon>
+       <fa-icon *ngIf="sortby == 'role' && sortType==false" style="cursor: pointer; margin-top: 10px" [icon]="faSortDesc"></fa-icon>
+     </th>
+     <th i18n>أجراءات</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr *ngFor="let item of data" >
+     <td [ngClass]="{'ar-dir': locale == 'ar'}">{{item["firstname"] +" "+ item["lastname"]}}</td>
+     <td [ngClass]="{'ar-dir': locale == 'ar'}">{{item["email"]}}</td>
+     <td [ngClass]="{'ar-dir': locale == 'ar'}">{{item["service"]["serviceName"]}}</td>
+     <td [ngClass]="{'ar-dir': locale == 'ar'}">{{item["role"]}}</td>
+     <td class="w-100 d-flex gap-3 justify-content-center align-items-center">
+       <fa-icon style="cursor: pointer" (click)="generatePass(item['userId'])" [icon]="faEnvelope"></fa-icon>
+       <input type="checkbox" [id]="item.id" [checked]="!item.disabled" [value]="item.id" (change)="onSwitchChange($event)"/><label [for]="item.id"></label>
+       <fa-icon style="cursor: pointer" (click)="clickButton(item)" [icon]="faPencil" [id]="item['id']"></fa-icon>
+     </td>
+   </tr>
+   </tbody>
+ </table>
+  <ng-template #loading>
+    <div style="width: 65vw" class="pt-3 align-self-center text-center mb-4">
+      <fa-icon [icon]="faCircleNotch" [spin]="true" style="color: #19469A" size="2x"></fa-icon>
+      <div class="loading-text" i18n>
+        الرجاء الإنتظار...
+      </div>
+    </div>
+  </ng-template>
+</div>
+

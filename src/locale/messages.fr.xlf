@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="ar" target-language="fr" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="ngb.datepicker.previous-month" datatype="html">
+        <source>Previous month</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/datepicker/datepicker-navigation.ts</context>
+          <context context-type="linenumber">61,64</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/datepicker/datepicker-navigation.ts</context>
+          <context context-type="linenumber">78,82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.next-month" datatype="html">
+        <source>Next month</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/datepicker/datepicker-navigation.ts</context>
+          <context context-type="linenumber">86</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/datepicker/datepicker-navigation.ts</context>
+          <context context-type="linenumber">86</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.alert.close" datatype="html">
+        <source>Close</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/ngb-config.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.HH" datatype="html">
+        <source>HH</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/ngb-config.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.toast.close-aria" datatype="html">
+        <source>Close</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/ngb-config.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.first" datatype="html">
+        <source>««</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/ngb-config.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.select-month" datatype="html">
+        <source>Select month</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/ngb-config.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/ngb-config.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.progressbar.value" datatype="html">
+        <source><x id="INTERPOLATION"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/ngb-config.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.carousel.slide-number" datatype="html">
+        <source> Slide <x id="INTERPOLATION"/> of <x id="INTERPOLATION_1"/> </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/ngb-config.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">Currently selected slide number read by screen reader</note>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.hours" datatype="html">
+        <source>Hours</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/ngb-config.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.previous" datatype="html">
+        <source>«</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/ngb-config.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.carousel.previous" datatype="html">
+        <source>Previous</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/ngb-config.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.MM" datatype="html">
+        <source>MM</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/ngb-config.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.next" datatype="html">
+        <source>»</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/ngb-config.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.select-year" datatype="html">
+        <source>Select year</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/ngb-config.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/ngb-config.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.carousel.next" datatype="html">
+        <source>Next</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/ngb-config.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.minutes" datatype="html">
+        <source>Minutes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/ngb-config.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.last" datatype="html">
+        <source>»»</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/ngb-config.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.increment-hours" datatype="html">
+        <source>Increment hours</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/ngb-config.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.first-aria" datatype="html">
+        <source>First</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/ngb-config.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.previous-aria" datatype="html">
+        <source>Previous</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/ngb-config.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.decrement-hours" datatype="html">
+        <source>Decrement hours</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/ngb-config.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.next-aria" datatype="html">
+        <source>Next</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/ngb-config.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.increment-minutes" datatype="html">
+        <source>Increment minutes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/ngb-config.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.last-aria" datatype="html">
+        <source>Last</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/ngb-config.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.decrement-minutes" datatype="html">
+        <source>Decrement minutes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/ngb-config.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.SS" datatype="html">
+        <source>SS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/ngb-config.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.seconds" datatype="html">
+        <source>Seconds</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/ngb-config.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.increment-seconds" datatype="html">
+        <source>Increment seconds</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/ngb-config.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.decrement-seconds" datatype="html">
+        <source>Decrement seconds</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/ngb-config.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.PM" datatype="html">
+        <source><x id="INTERPOLATION"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/ngb-config.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.AM" datatype="html">
+        <source><x id="INTERPOLATION"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/ngb-config.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1927185739640303084" datatype="html">
+        <source>الجمهورية التونسية</source>
+        <target>République Tunisienne</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/Authentication/forgot-pass-page/forgot-pass-page.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/Authentication/login-page/login-page.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8731049720041932538" datatype="html">
+        <source>ادخل بريدك الالكتروني</source>
+        <target>Entrez votre adresse email</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/Authentication/forgot-pass-page/forgot-pass-page.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/Authentication/login-page/login-page.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="385112763803548413" datatype="html">
+        <source>اعد ضبط كلمه السر</source>
+        <target>Réinitialiser le mot de passe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/Authentication/forgot-pass-page/forgot-pass-page.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6254647666741750013" datatype="html">
+        <source>أدخل كلمة السر</source>
+        <target>Entrer le mot de passe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/Authentication/login-page/login-page.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7780285873114813033" datatype="html">
+        <source>هل نسيت كلمة المرور؟</source>
+        <target>Mot de passe oublié?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/Authentication/login-page/login-page.component.html</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2256867068587592734" datatype="html">
+        <source>تسجيل الدخول</source>
+        <target>Se connecter</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/Authentication/login-page/login-page.component.html</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1783744627550686323" datatype="html">
+        <source>الإعداد و المتابعة</source>
+        <target>Configuration & suivi</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/core/shared/side-bar/side-bar.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5531417179481039703" datatype="html">
+        <source>إدارة المخزون</source>
+        <target>Gestion du stock</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/core/shared/side-bar/side-bar.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2633744759290386132" datatype="html">
+        <source>التسجيل</source>
+        <target>Bureau d'ordre</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/core/shared/side-bar/side-bar.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5936006147292986244" datatype="html">
+        <source>مراقبة التنظيم</source>
+        <target>Contrôle de règlements</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/core/shared/side-bar/side-bar.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="790174096960658907" datatype="html">
+        <source> إدارة المستخدمين </source>
+        <target> Gestion des utilisateurs </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/core/shared/top-page-header/top-page-header.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="143571274739243680" datatype="html">
+        <source>إدارة الخدمات </source>
+        <target>Gestion des services</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/core/shared/top-page-header/top-page-header.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5767274118452664089" datatype="html">
+        <source>تتبع العمل</source>
+        <target>Suivi des actions</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/core/shared/top-page-header/top-page-header.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6214247152961628429" datatype="html">
+        <source>بحث</source>
+        <target>Chercher</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/core/shared/top-page-header/top-page-header.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4968902778168728828" datatype="html">
+        <source>إسم الخدمة</source>
+        <source>Nom du service</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/users/ui/pages/service-management-page/service-management-page.component.html</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3217240832379993399" datatype="html">
+        <source>إدارة...</source>
+        <target>Administration ...</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/users/ui/pages/service-management-page/service-management-page.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6479915137763316631" datatype="html">
+        <source>المسؤل</source>
+        <target>Responsable</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/users/ui/pages/service-management-page/service-management-page.component.html</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1416166289787548156" datatype="html">
+        <source>السيدة أ</source>
+        <target>Mme x</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/users/ui/pages/service-management-page/service-management-page.component.html</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="422856196861993257" datatype="html">
+        <source>إلغاء</source>
+        <target>Annuler</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/users/ui/pages/service-management-page/service-management-page.component.html</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+           <context-group purpose="location">
+                  <context context-type="sourcefile">src/app/modules/users/ui/pages/service-management-page/service-management-page.component.html</context>
+                  <context context-type="linenumber">87</context>
+                </context-group>
+                <context-group purpose="location">
+                          <context context-type="sourcefile">src/app/modules/users/ui/pages/user-management-page/user-management-page.component.html</context>
+                          <context context-type="linenumber">81</context>
+                        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/users/ui/pages/user-management-page/user-management-page.component.html</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3206793685214160760" datatype="html">
+              <source>تحميل الخدمات</source>
+              <target>Télécharger les services</target>
+              <context-group purpose="location">
+                <context context-type="sourcefile">src/app/modules/users/ui/pages/service-management-page/service-management-page.component.html</context>
+                <context context-type="linenumber">86</context>
+              </context-group>
+            </trans-unit>
+            <trans-unit id="3634923557693824033" datatype="html">
+                    <source>تحميل المستخدمين</source>
+                    <target>Télécharger les utilisateurs</target>
+                    <context-group purpose="location">
+                      <context context-type="sourcefile">src/app/modules/users/ui/pages/user-management-page/user-management-page.component.html</context>
+                      <context context-type="linenumber">80</context>
+                    </context-group>
+                  </trans-unit>
+      <trans-unit id="1474729628357388206" datatype="html">
+        <source>لتحميل الخدمات عليك إحترم القواعد التالية</source>
+        <target>Pour télécharger les services, vous devez respecter les règles suivantes</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/users/ui/pages/service-management-page/service-management-page.component.html</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3991764878574201518" datatype="html">
+        <source> يجب أن يكون الملف من نوع .csv</source>
+        <target>Le fichier doit être de type .csv</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/users/ui/pages/service-management-page/service-management-page.component.html</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/users/ui/pages/user-management-page/user-management-page.component.html</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8602604229292240380" datatype="html">
+        <source>يجب أن يحتوي السطر الأول على مفاتيح الخدمات</source>
+        <target>La première ligne doit contenir les clés de service</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/users/ui/pages/service-management-page/service-management-page.component.html</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5840765390271370486" datatype="html">
+        <source>يمكنك تنزيل واستخدام النموذج وملء الملف <x id="START_LINK" ctype="x-a" equiv-text="&lt;a style=&quot;text-decoration: none ; cursor: pointer; outline: none&quot; href=&quot;../../../../../../assets/file/file-services.csv&quot; download=&quot;file-services.csv&quot;&gt;"/><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>من هنا<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <target>Vous pouvez télécharger et utiliser le formulaire et remplir le dossier <x id="START_LINK" ctype="x-a" equiv-text="&lt;a style=&quot;text-decoration: none ; cursor: pointer; outline: none&quot; href=&quot;../../../../../../assets/file/file-services.csv&quot; download=&quot;file-services.csv&quot;&gt;"/><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>cliquer ici<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/users/ui/pages/service-management-page/service-management-page.component.html</context>
+          <context context-type="linenumber">78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4790668861236197367" datatype="html">
+        <source> الرجاء الإنتظار... </source>
+        <target>attendez , s'il vous plaît ...</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/users/ui/pages/service-management-page/service-management-page.component.html</context>
+          <context context-type="linenumber">92,94</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/users/ui/pages/user-management-page/user-management-page.component.html</context>
+          <context context-type="linenumber">88,90</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3801664954348053204" datatype="html">
+        <source>الإسم و اللقب</source>
+        <target>Nom et prenom</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/users/ui/pages/user-management-page/user-management-page.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4235413059841882395" datatype="html">
+        <source>البريد الإلكتوني</source>
+        <target>Email</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/users/ui/pages/user-management-page/user-management-page.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="14958955118809552" datatype="html">
+        <source>كلمة السر</source>
+        <target>Mot de passe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/users/ui/pages/user-management-page/user-management-page.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5503988052049874901" datatype="html">
+        <source>الخدمات</source>
+        <target>Service</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/users/ui/pages/user-management-page/user-management-page.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8754876845845228450" datatype="html">
+        <source>لتحميل المستخدمين عليك إحترم القواعد التالية</source>
+        <target>Pour télécharger des utilisateurs, vous devez respecter les règles suivantes</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/users/ui/pages/user-management-page/user-management-page.component.html</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="718684250442031068" datatype="html">
+        <source>يجب أن يحتوي السطر الأول على مفاتيح المستخدم</source>
+        <target>La première ligne doit contenir les clés de l'utilisateur</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/users/ui/pages/user-management-page/user-management-page.component.html</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4819506278935081093" datatype="html">
+        <source>يجب أن يكون إسم الخدمة بالضبط مثل المسجلة في قاعدة البيانات</source>
+        <target>Le nom du service doit être exactement le même que celui de la base de données</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/users/ui/pages/user-management-page/user-management-page.component.html</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+      </trans-unit>
+       <trans-unit id="2229652212628994100" datatype="html">
+              <source> المستخدمين <x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon *ngIf=&quot;sortby == &apos;fullname&apos; &amp;&amp; sortType==true&quot; style=&quot;cursor: pointer; margin-top: 10px&quot; [icon]=&quot;faSortAsc&quot;&gt;"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon&gt;"/><x id="START_TAG_FA_ICON_1" ctype="x-fa_icon_1" equiv-text="&lt;fa-icon *ngIf=&quot;sortby == &apos;fullname&apos; &amp;&amp; sortType==false&quot; style=&quot;cursor: pointer; margin-top: 10px&quot; [icon]=&quot;faSortDesc&quot;&gt;"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon&gt;"/></source>
+              <target> Utilisateurs <x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon *ngIf=&quot;sortby == &apos;fullname&apos; &amp;&amp; sortType==true&quot; style=&quot;cursor: pointer; margin-top: 10px&quot; [icon]=&quot;faSortAsc&quot;&gt;"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon&gt;"/><x id="START_TAG_FA_ICON_1" ctype="x-fa_icon_1" equiv-text="&lt;fa-icon *ngIf=&quot;sortby == &apos;fullname&apos; &amp;&amp; sortType==false&quot; style=&quot;cursor: pointer; margin-top: 10px&quot; [icon]=&quot;faSortDesc&quot;&gt;"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon&gt;"/></target>
+              <context-group purpose="location">
+                <context context-type="sourcefile">src/app/modules/core/shared/data-table/data-table.component.html</context>
+                <context context-type="linenumber">5,7</context>
+              </context-group>
+            </trans-unit>
+            <trans-unit id="8960084906768429425" datatype="html">
+              <source> البريد الالكتروني <x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon *ngIf=&quot;sortby == &apos;email&apos; &amp;&amp; sortType==true&quot; style=&quot;cursor: pointer; margin-top: 10px&quot; [icon]=&quot;faSortAsc&quot;&gt;"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon&gt;"/><x id="START_TAG_FA_ICON_1" ctype="x-fa_icon_1" equiv-text="&lt;fa-icon *ngIf=&quot;sortby == &apos;email&apos; &amp;&amp; sortType==false&quot; style=&quot;cursor: pointer; margin-top: 10px&quot; [icon]=&quot;faSortDesc&quot;&gt;"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon&gt;"/></source>
+              <target> Email <x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon *ngIf=&quot;sortby == &apos;email&apos; &amp;&amp; sortType==true&quot; style=&quot;cursor: pointer; margin-top: 10px&quot; [icon]=&quot;faSortAsc&quot;&gt;"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon&gt;"/><x id="START_TAG_FA_ICON_1" ctype="x-fa_icon_1" equiv-text="&lt;fa-icon *ngIf=&quot;sortby == &apos;email&apos; &amp;&amp; sortType==false&quot; style=&quot;cursor: pointer; margin-top: 10px&quot; [icon]=&quot;faSortDesc&quot;&gt;"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon&gt;"/></target>
+              <context-group purpose="location">
+                <context context-type="sourcefile">src/app/modules/core/shared/data-table/data-table.component.html</context>
+                <context context-type="linenumber">9,11</context>
+              </context-group>
+            </trans-unit>
+            <trans-unit id="4540691291581328100" datatype="html">
+              <source>الخدمات <x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon *ngIf=&quot;sortby == &apos;service&apos; &amp;&amp; sortType==true&quot; style=&quot;cursor: pointer; margin-top: 10px&quot;  [icon]=&quot;faSortAsc&quot;&gt;"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon&gt;"/><x id="START_TAG_FA_ICON_1" ctype="x-fa_icon_1" equiv-text="&lt;fa-icon *ngIf=&quot;sortby == &apos;service&apos; &amp;&amp; sortType==false&quot; style=&quot;cursor: pointer; margin-top: 10px&quot;  [icon]=&quot;faSortDesc&quot;&gt;"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon&gt;"/></source>
+              <target>Service <x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon *ngIf=&quot;sortby == &apos;service&apos; &amp;&amp; sortType==true&quot; style=&quot;cursor: pointer; margin-top: 10px&quot;  [icon]=&quot;faSortAsc&quot;&gt;"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon&gt;"/><x id="START_TAG_FA_ICON_1" ctype="x-fa_icon_1" equiv-text="&lt;fa-icon *ngIf=&quot;sortby == &apos;service&apos; &amp;&amp; sortType==false&quot; style=&quot;cursor: pointer; margin-top: 10px&quot;  [icon]=&quot;faSortDesc&quot;&gt;"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon&gt;"/></target>
+              <context-group purpose="location">
+                <context context-type="sourcefile">src/app/modules/core/shared/data-table/data-table.component.html</context>
+                <context context-type="linenumber">14,16</context>
+              </context-group>
+            </trans-unit>
+            <trans-unit id="654561543926883430" datatype="html">
+              <source> الملف الشخصي <x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon *ngIf=&quot;sortby == &apos;role&apos;&amp;&amp; sortType==true&quot; style=&quot;cursor: pointer; margin-top: 10px&quot; [icon]=&quot;faSortAsc&quot;&gt;"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon&gt;"/><x id="START_TAG_FA_ICON_1" ctype="x-fa_icon_1" equiv-text="&lt;fa-icon *ngIf=&quot;sortby == &apos;role&apos; &amp;&amp; sortType==false&quot; style=&quot;cursor: pointer; margin-top: 10px&quot; [icon]=&quot;faSortDesc&quot;&gt;"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon&gt;"/></source>
+              <target> Profil <x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon *ngIf=&quot;sortby == &apos;role&apos;&amp;&amp; sortType==true&quot; style=&quot;cursor: pointer; margin-top: 10px&quot; [icon]=&quot;faSortAsc&quot;&gt;"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon&gt;"/><x id="START_TAG_FA_ICON_1" ctype="x-fa_icon_1" equiv-text="&lt;fa-icon *ngIf=&quot;sortby == &apos;role&apos; &amp;&amp; sortType==false&quot; style=&quot;cursor: pointer; margin-top: 10px&quot; [icon]=&quot;faSortDesc&quot;&gt;"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon&gt;"/></target>
+              <context-group purpose="location">
+                <context context-type="sourcefile">src/app/modules/core/shared/data-table/data-table.component.html</context>
+                <context context-type="linenumber">18,20</context>
+              </context-group>
+            </trans-unit>
+             <trans-unit id="6479915137763316631" datatype="html">
+                    <source>المسؤل</source>
+                    <target>Responsable</target>
+                    <context-group purpose="location">
+                      <context context-type="sourcefile">src/app/modules/users/ui/pages/service-management-page/service-management-page.component.html</context>
+                      <context context-type="linenumber">16</context>
+                    </context-group>
+                    <context-group purpose="location">
+                      <context context-type="sourcefile">src/app/modules/users/ui/pages/service-management-page/service-management-page.component.html</context>
+                      <context context-type="linenumber">59</context>
+                    </context-group>
+                  </trans-unit>
+                  <trans-unit id="2996715962575375201" datatype="html">
+                    <source>الإجراءات</source>
+                    <target>Actions</target>
+                    <context-group purpose="location">
+                      <context context-type="sourcefile">src/app/modules/users/ui/pages/service-management-page/service-management-page.component.html</context>
+                      <context context-type="linenumber">17</context>
+                    </context-group>
+                  </trans-unit>
+                  <trans-unit id="4968902778168728828" datatype="html">
+                    <source>إسم الخدمة</source>
+                    <target>Nom du service</target>
+                    <context-group purpose="location">
+                      <context context-type="sourcefile">src/app/modules/users/ui/pages/service-management-page/service-management-page.component.html</context>
+                      <context context-type="linenumber">55</context>
+                    </context-group>
+                  </trans-unit>
+                  <trans-unit id="3217240832379993399" datatype="html">
+                    <source>إدارة...</source>
+                    <target>Administration ...</target>
+                    <context-group purpose="location">
+                      <context context-type="sourcefile">src/app/modules/users/ui/pages/service-management-page/service-management-page.component.html</context>
+                      <context context-type="linenumber">56</context>
+                    </context-group>
+                  </trans-unit>
+                  <trans-unit id="3202700330572840326" datatype="html">
+                          <source>أجراءات</source>
+                          <target>Actions</target>
+                          <context-group purpose="location">
+                            <context context-type="sourcefile">src/app/modules/core/shared/data-table/data-table.component.html</context>
+                            <context context-type="linenumber">22</context>
+                          </context-group>
+                        </trans-unit>
+                        <trans-unit id="4790668861236197367" datatype="html">
+                                <source> الرجاء الإنتظار... </source>
+                                <target> attendez , s'il vous plaît ...</target>
+                                <context-group purpose="location">
+                                  <context context-type="sourcefile">src/app/modules/core/shared/data-table/data-table.component.html</context>
+                                  <context context-type="linenumber">42,44</context>
+                                </context-group>
+                                <context-group purpose="location">
+                                          <context context-type="sourcefile">src/app/modules/users/ui/pages/history-page/history-page.component.html</context>
+                                          <context context-type="linenumber">63,65</context>
+                                 </context-group>
+                                <context-group purpose="location">
+                                  <context context-type="sourcefile">src/app/modules/users/ui/pages/service-management-page/service-management-page.component.html</context>
+                                  <context context-type="linenumber">94,96</context>
+                                </context-group>
+                              </trans-unit>
+                              <trans-unit id="2996715962575375201" datatype="html">
+                                      <source>الإجراءات</source>
+                                      <target>Actions</target>
+                                      <context-group purpose="location">
+                                        <context context-type="sourcefile">src/app/modules/users/ui/pages/history-page/history-page.component.html</context>
+                                        <context context-type="linenumber">11</context>
+                                      </context-group>
+                                      <context-group purpose="location">
+                                        <context context-type="sourcefile">src/app/modules/users/ui/pages/service-management-page/service-management-page.component.html</context>
+                                        <context context-type="linenumber">13</context>
+                                      </context-group>
+                                    </trans-unit>
+                                    <trans-unit id="1346886028310205663" datatype="html">
+                                      <source>المستخدمين</source>
+                                      <target>Utilisateurs</target>
+                                      <context-group purpose="location">
+                                        <context context-type="sourcefile">src/app/modules/users/ui/pages/history-page/history-page.component.html</context>
+                                        <context context-type="linenumber">12</context>
+                                      </context-group>
+                                    </trans-unit>
+                                    <trans-unit id="2662965569798795883" datatype="html">
+                                      <source>التاريخ</source>
+                                      <target>Dates</target>
+                                      <context-group purpose="location">
+                                        <context context-type="sourcefile">src/app/modules/users/ui/pages/history-page/history-page.component.html</context>
+                                        <context context-type="linenumber">13</context>
+                                      </context-group>
+                                    </trans-unit>
+                                    <trans-unit id="5905385419513990329" datatype="html">
+                                      <source>الساعة</source>
+                                      <target>Heure</target>
+                                      <context-group purpose="location">
+                                        <context context-type="sourcefile">src/app/modules/users/ui/pages/history-page/history-page.component.html</context>
+                                        <context context-type="linenumber">14</context>
+                                      </context-group>
+                                    </trans-unit>
+                                    <trans-unit id="9090748796865579990" datatype="html">
+                                      <source>التفاصيل</source>
+                                      <target>Détails</target>
+                                      <context-group purpose="location">
+                                        <context context-type="sourcefile">src/app/modules/users/ui/pages/history-page/history-page.component.html</context>
+                                        <context context-type="linenumber">15</context>
+                                      </context-group>
+                                    </trans-unit>
+                                    <trans-unit id="2355146316625240093" datatype="html">
+                                      <source>تفاصيل الخدمة <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/> : &lt;&lt;<x id="INTERPOLATION" equiv-text="{{historyToEdit?.action}}"/>&gt;&gt;<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+                                      <target>Détails action<x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/> : &lt;&lt;<x id="INTERPOLATION" equiv-text="{{historyToEdit?.action}}"/>&gt;&gt;<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
+                                      <context-group purpose="location">
+                                        <context context-type="sourcefile">src/app/modules/users/ui/pages/history-page/history-page.component.html</context>
+                                        <context context-type="linenumber">48</context>
+                                      </context-group>
+                                    </trans-unit>
+                                    <trans-unit id="7120610034156654477" datatype="html">
+                                      <source>طالب الخدمة<x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/> : <x id="INTERPOLATION" equiv-text="{{historyToEdit?.service?.serviceName}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+                                      <target>Demandeur service<x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/> : <x id="INTERPOLATION" equiv-text="{{historyToEdit?.service?.serviceName}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
+                                      <context-group purpose="location">
+                                        <context context-type="sourcefile">src/app/modules/users/ui/pages/history-page/history-page.component.html</context>
+                                        <context context-type="linenumber">49</context>
+                                      </context-group>
+                                    </trans-unit>
+                                    <trans-unit id="2492774850946908943" datatype="html">
+                                      <source>المسؤل<x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/> : <x id="INTERPOLATION" equiv-text="{{historyToEdit?.user?.firstname + &quot; &quot; + historyToEdit?.user?.lastname}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+                                      <target>Gestionnaire<x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/> : <x id="INTERPOLATION" equiv-text="{{historyToEdit?.user?.firstname + &quot; &quot; + historyToEdit?.user?.lastname}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
+                                      <context-group purpose="location">
+                                        <context context-type="sourcefile">src/app/modules/users/ui/pages/history-page/history-page.component.html</context>
+                                        <context context-type="linenumber">50</context>
+                                      </context-group>
+                                    </trans-unit>
+                                    <trans-unit id="526035299063271951" datatype="html">
+                                      <source>التاريخ و الساعة<x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/> : <x id="INTERPOLATION" equiv-text="{{historyToEdit?.creationDate | date:&apos;dd/MM/yyyy HH:mm&apos;}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+                                      <target>Date et heure<x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/> : <x id="INTERPOLATION" equiv-text="{{historyToEdit?.creationDate | date:&apos;dd/MM/yyyy HH:mm&apos;}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
+                                      <context-group purpose="location">
+                                        <context context-type="sourcefile">src/app/modules/users/ui/pages/history-page/history-page.component.html</context>
+                                        <context context-type="linenumber">51</context>
+                                      </context-group>
+                                    </trans-unit>
+                                    <trans-unit id="7534502447030509867" datatype="html">
+                                      <source>فتح المخزون</source>
+                                      <target>Consulter Stock</target>
+                                      <context-group purpose="location">
+                                        <context context-type="sourcefile">src/app/modules/users/ui/pages/history-page/history-page.component.html</context>
+                                        <context context-type="linenumber">54</context>
+                                      </context-group>
+                                    </trans-unit>
+                                    <trans-unit id="5029438046594302220" datatype="html">
+                                      <source>طباعة</source>
+                                      <target>Imprimer</target>
+                                      <context-group purpose="location">
+                                        <context context-type="sourcefile">src/app/modules/users/ui/pages/history-page/history-page.component.html</context>
+                                        <context context-type="linenumber">55</context>
+                                      </context-group>
+                                    </trans-unit>
+                                    <trans-unit id="422856196861993257" datatype="html">
+                                      <source>إلغاء</source>
+                                      <target>Annuler</target>
+                                      <context-group purpose="location">
+                                        <context context-type="sourcefile">src/app/modules/users/ui/pages/history-page/history-page.component.html</context>
+                                        <context context-type="linenumber">56</context>
+                                      </context-group>
+                                      <context-group purpose="location">
+                                        <context context-type="sourcefile">src/app/modules/users/ui/pages/service-management-page/service-management-page.component.html</context>
+                                        <context context-type="linenumber">66</context>
+                                      </context-group>
+                                      <context-group purpose="location">
+                                        <context context-type="sourcefile">src/app/modules/users/ui/pages/user-management-page/user-management-page.component.html</context>
+                                        <context context-type="linenumber">59</context>
+                                      </context-group>
+                                    </trans-unit>
+                                    <trans-unit id="4417074757458168441" datatype="html">
+                                            <source>الرجاء الإنتظار...</source>
+                                            <target> attendez , s'il vous plaît ...</target>
+                                            <context-group purpose="location">
+                                              <context context-type="sourcefile">src/app/modules/users/ui/pages/user-management-page/user-management-page.component.html</context>
+                                              <context context-type="linenumber">88</context>
+                                            </context-group>
+                                          </trans-unit>
+    </body>
+  </file>
+</xliff>

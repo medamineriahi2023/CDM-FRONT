@@ -1,0 +1,86 @@
+tr>th {
+  height: 60px;
+  border: 3px solid white;
+  width: 18%;
+}
+thead{
+  background-color: #7FD3EE;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border: 3px solid white;
+  color:#fff;
+}
+tbody{
+  color: black;
+  border: 3px solid white;
+
+}
+td{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+tr>td {
+  height: 40px;
+  border: 3px solid white;
+  width: 18%;
+}
+table{
+  width: 70vw;
+}
+input[type=checkbox]{
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+#table label {
+  cursor: pointer;
+  /*text-indent: -9999px;*/
+  width: 35px;
+  height: 20px;
+  background: grey;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+  margin-left: 10px;
+}
+
+#table label:after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+#table input:checked + label {
+  background: #7FD3EE;
+}
+
+#table input:checked + label:after {
+  left: calc(100%);
+  transform: translateX(-100%);
+}
+
+#table label:active:after {
+  width: 50px;
+}
+
+.primary{
+  color: white;
+  background-color: #02C975!important;
+}
+.primary:hover{
+  color:white;
+}
+.cancel{
+  background-color: #3E3E3E!important;
+  color: white;
+}
+.cancel:hover{
+  color: white;
+}

@@ -1,0 +1,68 @@
+<app-header></app-header>
+<div class="d-flex justify-content-center w-100">
+  <app-side-bar selector="1"></app-side-bar>
+  <div class="flex-column">
+    <app-top-page-header [links]="links" [data]="topPageHeader" [hasCalender]="true" selectedIndex="3" (searchEvent)="search($event)"></app-top-page-header>
+    <div class="bg-light flex-column align-items-center justify-content-center w-100 pb-4" style="height: auto">
+      <div class="d-flex w-100">
+        <table>
+          <thead>
+          <tr class="text-center">
+            <th style="cursor: pointer; text-align: center" i18n>الإجراءات</th>
+            <th style="cursor: pointer; text-align: center" i18n>المستخدمين</th>
+            <th style="cursor: pointer; text-align: center" i18n>التاريخ</th>
+            <th style="cursor: pointer; text-align: center" i18n>الساعة</th>
+            <th style="cursor: pointer; text-align: center" i18n>التفاصيل</th>
+          </tr>
+          </thead>
+          <tbody id="table">
+          <tr *ngFor="let history of histories">
+            <td [ngClass]="{'ar-dir': locale == 'ar'}">{{history.action}}</td>
+            <td [ngClass]="{'ar-dir': locale == 'ar'}">{{history.user?.firstname + " " +history.user?.lastname}}</td>
+            <td [ngClass]="{'ar-dir': locale == 'ar'}">{{history.creationDate | date : 'shortDate'}}</td>
+            <td [ngClass]="{'ar-dir': locale == 'ar'}">{{history.creationDate | date:"HH:mm"}}
+            </td>
+            <td [ngClass]="{'ar-dir': locale == 'ar'}" class="text-center" style="cursor: pointer"><fa-icon  size="1x" [icon]="faInfoCircle" (click)="details(history)"></fa-icon></td>
+          </tr>
+
+          </tbody>
+        </table>
+      </div>
+      <div class="w-100 d-flex justify-content-center pt-3">
+        <select class="form-select-sm" [(ngModel)]="select" (ngModelChange)="selectPaginator($event)">
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select>
+      </div>
+    </div>
+
+    <ng-template #mymodal let-modal>
+      <div dir="rtl" class="p-3 text-center">
+        <h4 class="" id="modal-basic-title">{{modalTitle}}</h4>
+      </div>
+      <div id="details" class="d-flex justify-content-center flex-column p-5 " [ngClass]="{'ar-dir': locale == 'ar'}" style="min-height: 300px">
+        <h5 [ngClass]="{'ar-dir': locale == 'ar'}" i18n>تفاصيل الخدمة <span> : <<{{historyToEdit?.action}}>></span></h5>
+        <p [ngClass]="{'ar-dir': locale == 'ar'}" *ngIf="historyToEdit?.service" i18n>طالب الخدمة<span> : {{historyToEdit?.service?.serviceName}}</span></p>
+        <p [ngClass]="{'ar-dir': locale == 'ar'}" i18n>المسؤل<span> : {{historyToEdit?.user?.firstname + " " + historyToEdit?.user?.lastname}}</span></p>
+        <p [ngClass]="{'ar-dir': locale == 'ar'}" i18n>التاريخ و الساعة<span> : {{historyToEdit?.creationDate | date:'dd/MM/yyyy HH:mm'}}</span></p>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn primary" i18n>فتح المخزون</button>
+        <button type="button" class="btn primary" [useExistingCss]="true" [printStyle]="locale == 'ar' ?{p : {'direction': 'rtl'}, h5 : {'direction': 'rtl'}}: {p : {'direction': 'ltr'}, h5 : {'direction': 'ltr'}}" printSectionId="details" ngxPrint i18n>طباعة</button>
+        <button type="button" class="btn cancel" (click)="modal.close('Save click')" i18n>إلغاء</button>
+      </div>
+    </ng-template>
+  </div>
+  <ng-template #loading>
+    <div class="pt-3 align-self-center text-center mb-4">
+      <fa-icon [icon]="faCircleNotch" [spin]="true" style="color: #19469A" size="2x"></fa-icon>
+      <div class="loading-text" i18n>
+        الرجاء الإنتظار...
+      </div>
+    </div>
+  </ng-template>
+</div>
